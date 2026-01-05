@@ -1,1 +1,193 @@
+/* ===== Estilos generales ===== */
 
+:root {
+  --fondo: #0B1220;
+  --superficie: #121A2B;
+  --borde: #24304A;
+  --texto: #E6EAF2;
+  --texto-secundario: #B7C0D1;
+  --acento: #4DA3FF;
+  --acento-hover: #7BB9FF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: var(--fondo);
+  color: var(--texto);
+}
+
+/* Contenedor visual para que el contenido no quede pegado a los bordes */
+header, main, footer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+/* Header */
+header {
+  background-color: var(--superficie);
+  border-bottom: 1px solid var(--borde);
+}
+
+header h1 {
+  margin: 0;
+  font-size:  2rem;
+}
+
+header p {
+  margin: 6px 0 0 0;
+  color: var(--texto-secundario);
+}
+
+/* Navegación */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 14px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: var(--texto);
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  transition:color 0.2s ease, border-color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  color: var(--acento-hover);
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+}
+
+/* Estado de página actual */
+nav a[aria-current="page"] {
+  border-color: var(--acento);
+  color: var(--acento);
+  font-weight: bold;
+}
+
+/* Main */
+main {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+section {
+  background-color: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+h2, h3 {
+  margin-top: 0;
+}
+
+/* Imágenes */
+figure {
+  margin: 0 0 16px 0;
+  background-color: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+figcaption {
+  margin-top: 8px;
+  color: var(--texto-secundario);
+}
+
+/* Links dentro del contenido */
+main a {
+  color: var(--acento);
+}
+
+main a:hover,
+main a:focus-visible {
+  color: var(--acento-hover);
+  outline: 2px solid var(--acento);
+  outline-offset: 2px;
+}
+
+/* Footer */
+footer {
+  background-color: var(--superficie);
+  border-top: 1px solid var(--borde);
+  color: var(--texto-secundario);
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  margin: 6px 0;
+}
+
+/* Tabla de planes */
+.tabla-planes {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  background-color: var(--superficie);
+}
+
+.tabla-planes caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--texto-secundario);
+}
+
+.tabla-planes th,
+.tabla-planes td {
+  border: 1px solid var(--borde);
+  padding: 10px;
+  text-align: left;
+  color: var(--texto);
+}
+
+.tabla-planes th {
+  background-color: #1A2440;
+  font-weight: bold;
+}
+
+.tabla-planes tr:nth-child(even) {
+  background-color: #141E35;
+}
+
+/* Texto en columnas */
+.flex-grid {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.flex-grid article {
+  flex: 1 1 240px;
+  background-color: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 14px;
+}
